@@ -1,10 +1,9 @@
 function isEnoughCapacity(products, containerSize){
-    const maxProducts = Object.values(products) ;
-    let TotalProducts = 0
- for ( const product in maxProducts) {
-    TotalProducts += maxProducts[product];
-}
-return TotalProducts <= containerSize
+  let TotalProducts = 0
+  for (key in products) {
+    TotalProducts += products[key];
+    }
+    return TotalProducts <= containerSize
 }
 console.log(
     isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
@@ -21,3 +20,5 @@ console.log(
   console.log(
     isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
   ); // false
+
+  
